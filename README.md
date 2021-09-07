@@ -1,7 +1,7 @@
 # Stepin_Librarymanagmentsystem
 # BADGES
 
-[!code quality score ](https://www.code-inspector.com/project/27851/score/svg)
+[[!code quality score ](https://www.code-inspector.com/project/27851/score/svg)
 
 
 
