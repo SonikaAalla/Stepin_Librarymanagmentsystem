@@ -1,4 +1,7 @@
 # Stepin_Librarymanagmentsystem
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/54b8393b927a4b0f8c34a19f8a1363a1)](https://app.codacy.com/gh/SonikaAalla/Stepin_Librarymanagmentsystem?utm_source=github.com&utm_medium=referral&utm_content=SonikaAalla/Stepin_Librarymanagmentsystem&utm_campaign=Badge_Grade_Settings)
+
 # BADGES
 
 ![Code Quality Score](https://www.code-inspector.com/project/27851/score/svg)
