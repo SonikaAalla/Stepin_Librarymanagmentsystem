@@ -1,9 +1,7 @@
 # Stepin_Librarymanagmentsystem
 # BADGES
 
-|Build|Code Quality|Git Inspector|Unity|Code Coverage|
-|:----|:-----------|:------------|:----|:------------|
-
+[!code quality score ](https://www.code-inspector.com/project/27851/score/svg)
 
 
 
