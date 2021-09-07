@@ -1,29 +1,24 @@
-# Name Of the Project
-PROJECT_NAME = LMS
+PROJ_NAME = LMS
+TEST_PROJ_NAME = Test_$(PROJ_NAME)
 
-#All Source code file
-SRC = main.c\
-src/Addbook.c\
-src/Deletebook.c\
-src/issuebook.c\
-src/Searchbook.c\
-src/viewbooks.c
+OBJ = src/Addbook.o src/issuebook.o src/Deletebook.o src/Searchbook.o src/viewbooks.o src/main.o
+TEST = test/test.o unity/unity.o src/ll.o src/student.o
 
-TEST_SRC = src/Addbook.c\
-src/Deletebook.c\
-src/issuebook.c\
-src/Searchbook.c\
-src/viewbooks.c\
-unity/unity.c\
-test/test_Managment.c
+SRC =src/Addbook.c \
+src/issuebook.c \
+src/Deletebook.c \
+src/Searchbook.c \
+src/viewbooks.c 
 
-#Path to the header file
-INC_HEADER = inc
-INC_TEST = unity
+COV_SRC = test.c
 
-#To check if the OS is windows or linux and set the executable file extension and delete command accordingly
+TEST_SRC = test/test.c \
+unity/unity.c 
+INC_H = inc
+INC_T = unity
+
 ifdef OS
-   RM = del /q
+   RM = del 
    FixPath = $(subst /,\,$1)
    EXEC = exe
 else
@@ -33,41 +28,42 @@ else
 	  EXEC = out
    endif
 endif
-
-TEST_OUTPUT = Test_$(PROJECT_NAME).$(EXEC)
+.PHONY: run clean test doc all
 
 all:
-	gcc -I $(INC_HEADER) $(SRC) -o $(call FixPath, ./$(PROJECT_NAME).$(EXEC))
-
-run: all
-	$(call FixPath, ./$(PROJECT_NAME).$(EXEC))
-
-test:
-	gcc -I $(INC_HEADER) -I $(INC_TEST) $(TEST_SRC) -o $(call FixPath, ./$(TEST_OUTPUT))
-	$(call FixPath, ./$(TEST_OUTPUT))
+	gcc -std=c99 -I $(INC_H) $(SRC) src/main.c -o $(call FixPath,$(PROJ_NAME).$(EXEC))
 	
+run:
+	$(call FixPath,$(PROJ_NAME).$(EXEC))
+test:
+	gcc -std=c99 -I $(INC_H) -I $(INC_T) $(TEST_SRC) $(SRC) -o $(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
+	./$(call FixPath,$(TEST_PROJ_NAME).$(EXEC))
 
-coverageCheck:
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_HEADER) -I $(INC_TEST) $(TEST_SRC) -o $(call FixPath, $(TEST_OUTPUT))
-	$(call FixPath, ./$(TEST_OUTPUT))
-	gcov -a $(call FixPath, ./test_Managment.c)
+coverage:
+	cp test/test.c .
+	gcc -std=c99 -fprofile-arcs -ftest-coverage -I $(INC_H) -I $(INC_T) unity/unity.c test.c $(SRC) -o $(call FixPath, $(TEST_PROJ_NAME).$(EXEC))
+	$(call FixPath, ./$(TEST_PROJ_NAME).$(EXEC))
+	gcov -a $(COV_SRC)
 	$(RM) *.$(EXEC)
 	$(RM) *.gcda
 	$(RM) *.gcno
 	$(RM) *.c.gcov
 	$(RM) *.DAT
-	$(RM) test_Managment.c 
+	$(RM) test.c
+
 
 cppcheck:
-	cppcheck --enable=all -I $(INC_HEADER) $(SRC)
+	cppcheck --enable=all $(SRC) main.c
+debug:
+	gcc -std=c99 -I $(INC_H) $(SRC) src/main.c -g -o $(PROJ_NAME).$(EXEC)
+	gdb $(PROJ_NAME).$(EXEC)
 
 valgrind:
-	gcc -I $(INC_HEADER) -I $(INC_TEST) $(TEST_SRC) -o $(call FixPath, ./$(TEST_OUTPUT))
-	valgrind ./$(TEST_OUTPUT)
+	valgrind ./$(TEST_PROJ_NAME).$(EXEC)
 
 clean:
-	gcc -fprofile-arcs -ftest-coverage -I $(INC_HEADER) -I $(INC_TEST) $(TEST_SRC) -o $(call FixPath, $(TEST_OUTPUT))
+	$(RM) *.DAT
 	$(RM) *.$(EXEC)
 	$(RM) *.gcda
 	$(RM) *.gcno
-	$(RM) *.gcov
+	$(RM) *.c.gcov
