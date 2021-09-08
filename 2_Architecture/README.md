@@ -11,6 +11,7 @@
 # BEHAVIOUR DIAGRAMS
  ### 1.Low level desigm
  state diagram
- ![IMG](https://camo.githubusercontent.com/86b27df7b5770f8e273bd8a99c53404e09fb9810a58dff315021848be3634084/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622d7265736f75726365732d6170742f534d5f466c6f7743686172742e706e67)
+ ![IMG](https://i.pinimg.com/736x/c0/19/21/c019215ca831c0b0b75bdc2775e8e054--control-flow-uni.jpg)
+ 
  ## sequence diagram
  ![IMG](https://i.pinimg.com/originals/b4/42/2b/b4422bfdc81f24bbdf3b142b87ad4269.jpg)
