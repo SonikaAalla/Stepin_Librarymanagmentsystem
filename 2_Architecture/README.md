@@ -13,4 +13,4 @@
  state diagram
  ![IMG](https://camo.githubusercontent.com/86b27df7b5770f8e273bd8a99c53404e09fb9810a58dff315021848be3634084/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622d7265736f75726365732d6170742f534d5f466c6f7743686172742e706e67)
  ## sequence diagram
- ![IMG](http://4.bp.blogspot.com/-byGZ3E3j1Qk/T26v45u_2BI/AAAAAAAAAM8/sW1qJ9iuqfI/s1600/uml+sequence+diagram+for+library+mgmt+issue+book.JPG)
+ ![IMG](https://i.pinimg.com/originals/b4/42/2b/b4422bfdc81f24bbdf3b142b87ad4269.jpg)
