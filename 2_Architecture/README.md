@@ -2,7 +2,7 @@
 
 # STRUCTURE  DIAGRAMS
  ### High level design
- Usecase diagram
+  usecase diagram
 ![IMG](https://user-images.githubusercontent.com/66019753/109776906-1c959300-7c29-11eb-8a4b-e8c1bef0bb79.png)
 ## class diagram
 ![IMG](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0f8Aw-wz8JFlZfmM7YK4CWzJKvwHbN2T65w&usqp=CAU)
