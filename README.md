@@ -45,8 +45,8 @@ This project “LIBRARY MANAGEMENT SYSTEM” gives us the complete information a
 2.Updating and Deleting a file was overcame by using a temporary file to store data for some time.
 
 # Learning Resources
-1.tutorials point
+1.Tutorials point
 
-2.geeksforgeeks
+2.Geeksforgeeks
 
-3.fUTURE SKILLS
+3.future skills
