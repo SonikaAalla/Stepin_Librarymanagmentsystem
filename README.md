@@ -2,13 +2,16 @@
 
 
 # BADGES
- Code Quality 
+ ## Code Quality 
 ![Code Quality Score](https://www.code-inspector.com/project/27851/score/svg)
 
-Codacya Badge
+## code grade
+![Code grade](https://www.code-inspector.com/project/27851/status/svg)
+
+## Codacya Badge
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/54b8393b927a4b0f8c34a19f8a1363a1)](https://app.codacy.com/gh/SonikaAalla/Stepin_Librarymanagmentsystem?utm_source=github.com&utm_medium=referral&utm_content=SonikaAalla/Stepin_Librarymanagmentsystem&utm_campaign=Badge_Grade_Settings)
 
-Git Inspector
+## Git Inspector
 [![Contribution Check - Git Inspector](https://github.com/SonikaAalla/Stepin_Librarymanagmentsystem/actions/workflows/gitinspector.yml/badge.svg)](https://github.com/SonikaAalla/Stepin_Librarymanagmentsystem/actions/workflows/gitinspector.yml)
 
 
